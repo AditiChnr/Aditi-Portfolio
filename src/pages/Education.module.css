@@ -1,0 +1,8 @@
+.main { background: var(--black); }
+.list { padding: 5rem 2.5rem 7rem; max-width: 720px; }
+.item { display: grid; grid-template-columns: 120px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
+.year { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(192,57,43,0.4); padding-top: 5px; }
+.school { font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 0.35rem; }
+.detail { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+.nowBadge { display: inline-block; margin-top: 0.6rem; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.75rem; border-radius: 100px; background: #8b0000; color: white; box-shadow: 0 0 12px rgba(139,0,0,0.4); }
+@media(max-width: 600px) { .item { grid-template-columns: 1fr; gap: 0.5rem; } }

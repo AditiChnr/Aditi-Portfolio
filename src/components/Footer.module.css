@@ -1,0 +1,7 @@
+.footer { background: linear-gradient(135deg, #0a0f2e, #05060f); padding: 5rem 2.5rem 3rem; border-top: 1px solid rgba(139,0,0,0.3); }
+.name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 13vw, 12rem); line-height: 0.85; color: var(--white); text-align: center; letter-spacing: -0.01em; text-shadow: 0 0 80px rgba(139,0,0,0.3); }
+.bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(139,0,0,0.2); flex-wrap: wrap; gap: 1rem; }
+.tag { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1rem; color: var(--muted); }
+.socials { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.social { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.45rem 1.1rem; border-radius: 100px; border: 1px solid rgba(139,0,0,0.3); color: var(--muted); text-decoration: none; transition: all 0.2s; }
+.social:hover { background: #8b0000; color: white; border-color: #c0392b; box-shadow: 0 0 16px rgba(192,57,43,0.4); }

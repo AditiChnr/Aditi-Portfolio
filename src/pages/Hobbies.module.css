@@ -1,0 +1,28 @@
+.main { background: var(--black); }
+.jackBanner { background: linear-gradient(135deg, #0a0f2e, #0d1b4b); padding: 4rem 2.5rem; border-bottom: 1px solid rgba(139,0,0,0.2); }
+.jackQ { font-family: 'Instrument Serif', serif; font-style: italic; font-size: clamp(1.3rem, 3vw, 2.2rem); line-height: 1.5; color: #c0392b; max-width: 780px; }
+.jackAttr { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(240,238,248,0.2); margin-top: 1.2rem; }
+.gallerySection { padding: 2rem 0 0; background: var(--black); position: relative; }
+.gallerySub { text-align: center; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(240,238,248,0.2); padding-top: 1.5rem; }
+.detailHeader { padding: 4rem 2.5rem 1rem; border-top: 1px solid rgba(139,0,0,0.15); }
+.detailTitle { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 4rem); color: var(--white); opacity: 0.4; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1px; background: rgba(240,238,248,0.04); }
+.cell { background: var(--black); aspect-ratio: 1; position: relative; overflow: hidden; cursor: default; transition: background 0.2s; }
+.cell:hover { background: var(--deep); }
+.front { position: absolute; inset: 0; padding: 2rem; display: flex; flex-direction: column; justify-content: flex-end; transition: opacity 0.3s, transform 0.3s; }
+.front.hidden { opacity: 0; transform: scale(1.04); }
+.num { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: rgba(192,57,43,0.15); line-height: 1; }
+.name { font-size: 0.96rem; font-weight: 700; color: var(--white); margin-top: 0.3rem; }
+.blurb { font-size: 0.78rem; color: var(--muted); line-height: 1.55; margin-top: 0.25rem; }
+.imgOverlay { position: absolute; inset: 0; background: #0a0f2e; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+.imgOverlay.visible { opacity: 1; pointer-events: all; }
+.slideLabel { position: absolute; top: 1rem; left: 1.2rem; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(192,57,43,0.6); z-index: 2; }
+.slide { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.5s; }
+.slide.activeSlide { opacity: 1; }
+.placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+.placeholderBox { width: 72px; height: 72px; border: 1.5px dashed rgba(192,57,43,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.placeholderLabel { font-size: 0.55rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(192,57,43,0.3); }
+.dots { position: absolute; bottom: 0.9rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.4rem; }
+.dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(240,238,248,0.15); transition: background 0.2s; }
+.dotOn { background: #c0392b; }
+@media(max-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }

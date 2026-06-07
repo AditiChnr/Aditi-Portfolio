@@ -1,0 +1,41 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 2.5rem;
+  background: rgba(5,6,15,0.9); backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(139,0,0,0.2);
+  gap: 1rem;
+}
+.logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem;
+  letter-spacing: 0.08em; color: var(--white); text-decoration: none; flex-shrink: 0;
+  text-shadow: 0 0 20px rgba(192,57,43,0.5);
+}
+.links { display: flex; gap: 1.6rem; list-style: none; flex: 1; justify-content: center; }
+.link {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(240,238,248,0.35); text-decoration: none; transition: color 0.2s;
+}
+.link:hover, .active { color: var(--white); }
+.active { color: #c0392b !important; }
+.stickerBtn {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  background: #8b0000; color: white; border: 1px solid rgba(192,57,43,0.4);
+  border-radius: 100px; padding: 0.45rem 1.1rem; cursor: pointer;
+  font-family: var(--font-body); transition: all 0.2s; flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(139,0,0,0.4);
+}
+.stickerBtn:hover { background: #c0392b; box-shadow: 0 0 20px rgba(192,57,43,0.6); }
+.burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.burger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
+@media(max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+  .links {
+    display: none; position: fixed; inset: 0; top: 60px;
+    background: var(--black); flex-direction: column; justify-content: center;
+    align-items: center; gap: 2rem;
+  }
+  .links.open { display: flex; }
+  .link { font-size: 1.5rem; }
+  .burger { display: flex; }
+}

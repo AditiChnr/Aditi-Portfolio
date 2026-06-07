@@ -1,0 +1,21 @@
+.main { background: #05060f; min-height: 100vh; }
+.genreNav { display: flex; gap: 0.5rem; flex-wrap: wrap; padding: 1.8rem 2.5rem; position: sticky; top: 67px; z-index: 10; background: rgba(5,6,15,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(139,0,0,0.15); }
+.genreBtn { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.48rem 1.2rem; border-radius: 100px; border: 1px solid rgba(139,0,0,0.2); background: transparent; color: rgba(240,238,248,0.3); cursor: pointer; font-family: var(--font-body); transition: all 0.2s; }
+.genreBtn:hover { border-color: rgba(192,57,43,0.5); color: var(--white); }
+.panel { padding: 3.5rem 2.5rem 6rem; animation: fadeIn 0.35s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.panelHeader { margin-bottom: 3rem; border-bottom: 1px solid rgba(139,0,0,0.12); padding-bottom: 2rem; }
+.panelTitle { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 9vw, 8rem); line-height: 0.88; margin-bottom: 0.5rem; }
+.panelStats { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(240,238,248,0.2); margin-bottom: 0.9rem; }
+.panelVibe { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1rem; color: var(--muted); max-width: 580px; line-height: 1.75; }
+.trackList { display: flex; flex-direction: column; }
+.trackRow { display: grid; grid-template-columns: 3rem 1fr auto; gap: 1.5rem; padding: 1.2rem 0; align-items: center; border-bottom: 1px solid rgba(139,0,0,0.08); transition: background 0.15s; }
+.trackRow:hover { background: rgba(13,27,75,0.3); }
+.trackIndex { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: rgba(192,57,43,0.2); }
+.trackInfo { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.trackName { font-size: 0.96rem; font-weight: 600; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.trackArtist { font-size: 0.78rem; color: var(--muted); }
+.trackAlbum { font-size: 0.72rem; color: rgba(240,238,248,0.15); text-align: right; max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.appleLink { display: inline-block; margin-top: 2.5rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.6rem 1.4rem; border-radius: 100px; border: 1px solid rgba(139,0,0,0.3); color: rgba(192,57,43,0.6); text-decoration: none; transition: all 0.2s; }
+.appleLink:hover { background: #8b0000; color: white; border-color: #c0392b; box-shadow: 0 0 16px rgba(192,57,43,0.4); }
+@media(max-width: 600px) { .trackRow { grid-template-columns: 2.5rem 1fr; } .trackAlbum { display: none; } .genreNav { padding: 1.2rem 1.5rem; } .panel { padding: 2.5rem 1.5rem 5rem; } }

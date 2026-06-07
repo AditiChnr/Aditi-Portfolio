@@ -1,0 +1,74 @@
+/* HERO */
+.hero {
+  min-height: 100vh; background: var(--black);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 2rem 2.5rem 3.5rem; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 10% 50%, rgba(139,0,0,0.18) 0%, transparent 50%),
+              radial-gradient(ellipse at 90% 20%, rgba(10,15,46,0.8) 0%, transparent 60%),
+              radial-gradient(ellipse at 50% 100%, rgba(13,27,75,0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+.eyebrow { position: absolute; top: 6rem; left: 2.5rem; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(240,238,248,0.2); z-index: 1; }
+.heroName { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 16vw, 13rem); line-height: 0.85; position: relative; z-index: 1; }
+.solid { display: block; color: var(--white); text-shadow: 0 0 60px rgba(139,0,0,0.2); }
+.outline { display: block; -webkit-text-stroke: 2px rgba(240,238,248,0.25); color: transparent; }
+.accent { color: #c0392b; -webkit-text-stroke: 0; text-shadow: 0 0 40px rgba(192,57,43,0.6); }
+.divider { height: 1px; background: rgba(139,0,0,0.2); margin: 2rem 0 1.5rem; position: relative; z-index: 1; }
+.heroBottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; position: relative; z-index: 1; }
+.heroTag { font-family: 'Instrument Serif', serif; font-style: italic; font-size: clamp(1rem, 2.2vw, 1.4rem); color: rgba(240,238,248,0.4); margin-bottom: 0.9rem; }
+.heroTag strong { color: #c0392b; font-style: normal; font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.06em; font-size: 1.1em; text-shadow: 0 0 20px rgba(192,57,43,0.5); }
+.heroLinks { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.heroLink { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px; border: 1px solid rgba(139,0,0,0.3); color: rgba(240,238,248,0.4); text-decoration: none; transition: all 0.2s; }
+.heroLink:hover { background: #8b0000; color: white; border-color: #c0392b; box-shadow: 0 0 16px rgba(192,57,43,0.4); }
+.heroRight { max-width: 300px; text-align: right; font-size: 0.86rem; line-height: 1.8; color: rgba(240,238,248,0.28); }
+.scrollIndicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 1; }
+.scrollLabel { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(240,238,248,0.18); }
+.scrollBar { width: 1px; height: 65px; background: linear-gradient(to bottom, transparent, rgba(192,57,43,0.5)); animation: pulse 2.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.2} 50%{opacity:1} }
+
+/* ABOUT */
+.about { background: var(--deep); color: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; padding: 9rem 2.5rem; }
+.kicker { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(192,57,43,0.6); margin-bottom: 1.2rem; }
+.aboutH { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 0.88; margin-bottom: 2.5rem; }
+.pink { color: #c0392b; }
+.aboutBody { font-size: 0.96rem; line-height: 1.9; color: var(--muted); }
+.aboutBody p + p { margin-top: 1.3rem; }
+.aboutBody strong { color: var(--white); font-weight: 600; }
+.aboutBody em { font-style: italic; }
+.infoStack { padding-top: 1rem; }
+.infoRow { display: grid; grid-template-columns: 100px 1fr; gap: 1.5rem; padding: 1.2rem 0; border-bottom: 1px solid rgba(139,0,0,0.12); align-items: baseline; }
+.infoK { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(192,57,43,0.4); }
+.infoV { font-size: 0.9rem; color: var(--white); line-height: 1.6; }
+.nowTag { display: inline-block; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.6rem; border-radius: 100px; background: #8b0000; color: white; margin-left: 0.4rem; vertical-align: middle; }
+
+/* COUNTRIES */
+.countries { position: relative; height: 100vh; background: var(--black); display: flex; flex-direction: column; overflow: hidden; }
+.countriesTop { padding: 6rem 2.5rem 2rem; border-bottom: 1px solid rgba(139,0,0,0.15); display: flex; justify-content: space-between; align-items: flex-end; flex-shrink: 0; }
+.countriesH { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 5.5rem); line-height: 0.9; color: var(--white); }
+.yellow { color: #c0392b; }
+.countriesHint { font-size: 0.75rem; color: rgba(240,238,248,0.18); font-style: italic; max-width: 180px; text-align: right; line-height: 1.6; }
+.flagsScene { flex: 1; display: flex; align-items: center; overflow: hidden; padding: 0 2.5rem; }
+.flagsTrack { display: flex; gap: 3rem; align-items: center; flex-shrink: 0; will-change: transform; transition: transform 0.05s linear; }
+.flagBall { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; cursor: default; }
+.flagCircle { width: 130px; height: 130px; border-radius: 50%; border: 1.5px solid rgba(139,0,0,0.2); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; background: rgba(10,15,46,0.4); }
+.flagBall:hover .flagCircle { border-color: #c0392b; transform: scale(1.08); box-shadow: 0 0 30px rgba(192,57,43,0.3); }
+.flagName { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(240,238,248,0.25); }
+.flagBall:hover .flagName { color: #c0392b; }
+.flagNote { font-size: 0.58rem; color: rgba(240,238,248,0.15); font-style: italic; }
+.progressBar { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: rgba(139,0,0,0.1); }
+.progressFill { height: 100%; transition: width 0.05s linear, background 0.4s; }
+.lockNote { position: absolute; bottom: 1.2rem; left: 50%; transform: translateX(-50%); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(240,238,248,0.15); white-space: nowrap; }
+
+/* Music dark theme */
+@media(max-width: 768px) {
+  .hero { padding: 1.5rem 1.5rem 3rem; }
+  .about { grid-template-columns: 1fr; padding: 6rem 1.5rem; gap: 3rem; }
+  .heroBottom { flex-direction: column; }
+  .heroRight { text-align: left; }
+  .infoRow { grid-template-columns: 90px 1fr; }
+  .flagCircle { width: 90px; height: 90px; font-size: 2.5rem; }
+}

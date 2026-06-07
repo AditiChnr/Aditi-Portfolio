@@ -1,0 +1,17 @@
+.wrapper { position: relative; width: 100%; height: 480px; overflow: hidden; }
+.track { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; user-select: none; }
+.item {
+  position: absolute; width: 220px; height: 280px;
+  will-change: transform, opacity; transition: filter 0.1s;
+  pointer-events: none;
+}
+.itemInner { width: 100%; height: 100%; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); position: relative; }
+.itemBg { position: absolute; inset: 0; }
+.itemContent {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  justify-content: flex-end; padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+}
+.itemNum { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: rgba(255,255,255,0.15); line-height: 1; }
+.itemLabel { font-size: 1rem; font-weight: 700; margin-top: 0.2rem; line-height: 1.3; }
+.hint { position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.2); }

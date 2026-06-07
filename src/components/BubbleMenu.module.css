@@ -1,0 +1,31 @@
+.wrap {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 1000;
+  display: flex; flex-direction: column-reverse; align-items: flex-end; gap: 0.7rem;
+}
+.trigger {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: #8b0000; border: 1.5px solid rgba(255,255,255,0.15);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  cursor: pointer; transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 0 20px rgba(139,0,0,0.5), 0 4px 16px rgba(0,0,0,0.4);
+}
+.trigger:hover { background: #c0392b; transform: scale(1.08); }
+.triggerLine { display: block; width: 18px; height: 1.5px; background: white; border-radius: 2px; transition: all 0.2s; }
+.open .trigger { background: #c0392b; transform: rotate(45deg); }
+.bubbles { display: flex; flex-direction: column-reverse; align-items: flex-end; gap: 0.6rem; }
+.bubble {
+  background: rgba(10,15,46,0.95); border: 1px solid rgba(139,0,0,0.4);
+  border-radius: 100px; padding: 0.5rem 1.2rem;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: all 0.25s; opacity: 0; transform: translateY(10px) scale(0.85);
+  pointer-events: none; white-space: nowrap;
+  box-shadow: 0 0 12px rgba(139,0,0,0.2);
+}
+.open .bubble {
+  opacity: 1; transform: translateY(0) scale(1); pointer-events: all;
+  transition: opacity 0.25s var(--i, 0), transform 0.25s var(--i, 0), background 0.15s, color 0.15s;
+}
+.bubble:hover { background: #8b0000; color: white; border-color: #c0392b; }
+.bubbleActive { background: #8b0000 !important; color: white !important; border-color: #c0392b !important; }
+.bubbleLabel { pointer-events: none; }

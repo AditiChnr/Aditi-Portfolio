@@ -1,0 +1,11 @@
+.main { background: var(--black); }
+.domeSection { background: linear-gradient(to bottom, var(--black), var(--deep)); padding: 2rem 0; border-bottom: 1px solid rgba(139,0,0,0.15); }
+.domeHint { text-align: center; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(240,238,248,0.2); margin-bottom: 0; }
+.listSection { padding: 3rem 2.5rem 6rem; display: flex; flex-direction: column; }
+.listRow { display: grid; grid-template-columns: 3rem 3rem 1fr; gap: 1.5rem; padding: 1.8rem 0; border-bottom: 1px solid var(--border); align-items: center; transition: background 0.18s; }
+.listRow:hover { background: rgba(13,27,75,0.3); }
+.listNum { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: rgba(192,57,43,0.3); }
+.listFlag { font-size: 2rem; }
+.listName { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
+.homeTag { display: inline-block; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.6rem; border-radius: 100px; background: #8b0000; color: white; margin-left: 0.6rem; vertical-align: middle; }
+.listDetail { font-size: 0.86rem; color: var(--muted); line-height: 1.65; }

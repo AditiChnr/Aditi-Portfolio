@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className={styles.hero}>
-        <div className={styles.eyebrow}>Aditi Channavar — cantstopaditi — Belagavi — 2024</div>
+        <div className={styles.eyebrow}>Aditi Channavar — cantstopaditi </div>
         <div className={styles.heroName}>
           <span className={styles.solid}>ADITI</span>
           <span className={styles.outline}>CHAN<span className={styles.accent}>N</span>AVAR</span>

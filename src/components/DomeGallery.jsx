@@ -19,7 +19,6 @@ export default function DomeGallery({ items }) {
     return () => el.removeEventListener('mousemove', onMove)
   }, [])
 
-  // Row layout for 10 items: 1-3-4-2
   const rowDefs = [1, 3, 4, 2]
   let idx = 0
   const grid = rowDefs.map(count => {
@@ -55,6 +54,7 @@ export default function DomeGallery({ items }) {
                   <span className={styles.cellFlag}>{item.flag}</span>
                   <span className={styles.cellName}>{item.name}</span>
                   {item.home && <span className={styles.homeTag}>Home</span>}
+                  {item.secondHome && <span className={styles.homeTag} style={{ background: '#0d1b4b', border: '1px solid #c0392b' }}>Second Home</span>}
                 </div>
               </div>
             )

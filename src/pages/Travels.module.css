@@ -9,3 +9,10 @@
 .listName { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
 .homeTag { display: inline-block; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.6rem; border-radius: 100px; background: #8b0000; color: white; margin-left: 0.6rem; vertical-align: middle; }
 .listDetail { font-size: 0.86rem; color: var(--muted); line-height: 1.65; }
+.secondHomeTag {
+  display: inline-block;
+  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.15rem 0.6rem; border-radius: 100px;
+  background: #0d1b4b; color: #c0392b;
+  border: 1px solid #c0392b; margin-left: 0.6rem; vertical-align: middle;
+}

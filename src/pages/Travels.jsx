@@ -4,7 +4,7 @@ import styles from './Travels.module.css'
 
 const PLACES = [
   { flag:'🇮🇳', name:'India', detail:'Where it all started — and where it came back to. Born in Belagavi, Karnataka. Home.', home: true },
-  { flag:'🇦🇪', name:'UAE', detail:'Grew up here for sixteen years. Leaders Private School, Sharjah. Expo 2020. The city that shaped everything.' },
+  { flag:'🇦🇪', name:'UAE', detail:'Grew up here for sixteen years. Leaders Private School, Sharjah. Expo 2020. The city that shaped everything.', secondHome: true },
   { flag:'🇧🇭', name:'Bahrain', detail:'The island kingdom of the Gulf. A short crossing that opens to a different pace entirely.' },
   { flag:'🇴🇲', name:'Oman', detail:"Dramatic landscapes and a warmth that's hard to describe until you've been there." },
   { flag:'🇶🇦', name:'Qatar', detail:'Modern, ambitious, always building toward something. The pearl of the Gulf.' },

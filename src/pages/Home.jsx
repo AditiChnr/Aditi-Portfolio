@@ -37,7 +37,7 @@ export default function Home() {
           </div>
           <p className={styles.heroRight}>
             First year CSE at Gogte Institute of Technology, Belagavi.<br />
-            Grew up in Sharjah, UAE. Nine countries. Five languages. Still going.
+            Grew up in  UAE. Nine countries. Five languages. Still going.
           </p>
         </div>
         <div className={styles.scrollIndicator}>
@@ -52,7 +52,7 @@ export default function Home() {
           <div className={styles.kicker}>Who I am</div>
           <h2 className={styles.aboutH}>A BIT<br />OF <span className={styles.pink}>EVERY</span><br /><span className={styles.pink}>THING</span></h2>
           <div className={styles.aboutBody}>
-            <p>Born in Belagavi. Moved to the UAE at six months old and spent sixteen years growing up in Sharjah. Leaders Private School gave me an international lens and a comfort with people from everywhere.</p>
+            <p>Born in Belagavi. Moved to the UAE at six months old and spent sixteen years growing up in UAE. Leaders Private School gave me an international lens and a comfort with people from everywhere.</p>
             <p>After 10th standard I came back to India, did science at RLS PU, took a gap year preparing for NEET — then pivoted to engineering. It turned out to be exactly the right call.</p>
             <p>Now I'm in first year CSE at GIT, already <strong>leading two clubs</strong> and winning competitions. The tagline <em>cantstopaditi</em> isn't a personality. It's a track record.</p>
           </div>

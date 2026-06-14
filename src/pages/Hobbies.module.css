@@ -26,3 +26,22 @@
 .dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(240,238,248,0.15); transition: background 0.2s; }
 .dotOn { background: #c0392b; }
 @media(max-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
+.cardWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 2rem;
+  background: var(--black);
+}
+.cardSpin {
+  width: clamp(180px, 25vw, 320px);
+  animation: spinCard 12s linear infinite;
+  filter: drop-shadow(0 0 40px rgba(192,57,43,0.3));
+}
+@keyframes spinCard {
+  0% { transform: rotateY(0deg) rotate(0deg); }
+  25% { transform: rotateY(90deg) rotate(3deg); }
+  50% { transform: rotateY(180deg) rotate(0deg); }
+  75% { transform: rotateY(270deg) rotate(-3deg); }
+  100% { transform: rotateY(360deg) rotate(0deg); }
+}

@@ -1,10 +1,16 @@
 import { useState, useEffect, useRef } from 'react'
 import styles from './StickerLayer.module.css'
 
+const STICKER_IMAGES = [
+  { id: 'giraffe', src: '/stickers/sticker-giraffe.jpeg', label: 'Space Giraffe' },
+  { id: 'mcqueen', src: '/stickers/sticker-mcqueen.jpeg', label: 'Ka-chow' },
+  { id: 'cat', src: '/stickers/sticker-cat.jpeg', label: 'Fluffy Cat' },
+]
+
 const SYMBOLS = ['★','✦','◆','●','▲','✿','❋','✺','⬡','⬢','✻','✼','⊕','⊗','✙','◉','❖','☆','◇','▽','○','△','♦','✧','✩','✪','✫','✬']
 const COLORS = ['#FFE034','#FF2D7A','#00E5C8','#FF5C1A','#B8FF00','#ffffff','#C8B6FF','#FFB3C6']
 
-function Sticker({ sym, x, y, size, color, rotation }) {
+function Sticker({ sym, imgSrc, x, y, size, color, rotation }) {
   const ref = useRef(null)
   const dragging = useRef(false)
   const offset = useRef({ x: 0, y: 0 })
@@ -36,8 +42,19 @@ function Sticker({ sym, x, y, size, color, rotation }) {
     <div
       ref={ref}
       className={styles.sticker}
-      style={{ left: pos.x, top: pos.y, fontSize: size, color, transform: `rotate(${rotation}deg)` }}
-    >{sym}</div>
+      style={{
+        left: pos.x, top: pos.y,
+        transform: `rotate(${rotation}deg)`,
+        width: imgSrc ? size * 3 : undefined,
+        fontSize: imgSrc ? undefined : size,
+        color: imgSrc ? undefined : color,
+      }}
+    >
+      {imgSrc
+        ? <img src={imgSrc} alt="" style={{ width: '100%', height: 'auto', display: 'block', pointerEvents: 'none' }} />
+        : sym
+      }
+    </div>
   )
 }
 
@@ -51,9 +68,23 @@ export default function StickerLayer() {
     return () => document.removeEventListener('toggle-stickers', handler)
   }, [])
 
-  const spawn = (sym) => {
+  const spawnImage = (src) => {
     setStickers(prev => [...prev, {
       id: Date.now() + Math.random(),
+      imgSrc: src,
+      sym: null,
+      x: Math.random() * (window.innerWidth - 150) + 20,
+      y: Math.random() * (window.innerHeight - 150) + window.scrollY + 20,
+      size: 40,
+      color: null,
+      rotation: (Math.random() - 0.5) * 20,
+    }])
+  }
+
+  const spawnSymbol = (sym) => {
+    setStickers(prev => [...prev, {
+      id: Date.now() + Math.random(),
+      imgSrc: null,
       sym,
       x: Math.random() * (window.innerWidth - 80) + 20,
       y: Math.random() * (window.innerHeight - 80) + window.scrollY + 20,
@@ -69,10 +100,18 @@ export default function StickerLayer() {
         {stickers.map(s => <Sticker key={s.id} {...s} />)}
       </div>
       <div className={`${styles.tray} ${open ? styles.open : ''}`}>
-        <div className={styles.trayLabel}>Drop a sticker</div>
+        <div className={styles.trayLabel}>Your stickers</div>
+        <div className={styles.imageStickers}>
+          {STICKER_IMAGES.map(s => (
+            <button key={s.id} className={styles.imageBtn} onClick={() => spawnImage(s.src)} title={s.label}>
+              <img src={s.src} alt={s.label} />
+            </button>
+          ))}
+        </div>
+        <div className={styles.trayDivider}>+ symbols</div>
         <div className={styles.trayGrid}>
           {SYMBOLS.map(s => (
-            <button key={s} className={styles.trayItem} onClick={() => spawn(s)}>{s}</button>
+            <button key={s} className={styles.trayItem} onClick={() => spawnSymbol(s)}>{s}</button>
           ))}
         </div>
       </div>

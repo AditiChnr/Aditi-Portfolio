@@ -92,12 +92,20 @@ export default function Hobbies() {
         </blockquote>
         <p className={styles.jackAttr}>The quote that lives rent-free — and fits perfectly.</p>
       </div>
-
-      {/* Spinning card */}
+      
+      {/* Flipping card */}
       <div ref={cardRef} className={`reveal ${styles.cardWrap}`}>
-        <img src="/stickers/card.png" alt="Jack of all trades" className={styles.cardSpin} />
+        <div className={styles.cardFlip}>
+          <div className={styles.cardInner}>
+            <div className={styles.cardFront}>
+              <img src="/stickers/card.png" alt="Jack of all trades" />
+            </div>
+            <div className={styles.cardBack}>
+              <img src="/stickers/card-back.png" alt="Card back" />
+            </div>
+          </div>
+        </div>
       </div>
-
       {/* Circular Gallery */}
       <div className={styles.gallerySection}>
         <p className={styles.gallerySub}>Drag to explore</p>

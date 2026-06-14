@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './StickerLayer.module.css'
 
 const STICKER_IMAGES = [
-  { id: 'giraffe', src: '/stickers/sticker-giraffe.jpeg', label: 'Space Giraffe' },
-  { id: 'mcqueen', src: '/stickers/sticker-mcqueen.jpeg', label: 'Ka-chow' },
-  { id: 'cat', src: '/stickers/sticker-cat.jpeg', label: 'Fluffy Cat' },
+  { id: 'giraffe', src: '/stickers/sticker-giraffe.png', label: 'Space Giraffe' },
+  { id: 'mcqueen', src: '/stickers/sticker-mcqueen.png', label: 'Ka-chow' },
+  { id: 'cat', src: '/stickers/sticker-cat.png', label: 'Milo' },
 ]
 
 const SYMBOLS = ['★','✦','◆','●','▲','✿','❋','✺','⬡','⬢','✻','✼','⊕','⊗','✙','◉','❖','☆','◇','▽','○','△','♦','✧','✩','✪','✫','✬']

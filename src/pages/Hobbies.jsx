@@ -1,7 +1,6 @@
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { useReveal } from '../components/useReveal'
 import CircularGallery from '../components/CircularGallery'
-import ElectricBorder from '../components/ElectricBorder'
 import styles from './Hobbies.module.css'
 
 const HOBBY_ITEMS = [
@@ -29,8 +28,6 @@ const HOBBY_DETAILS = [
   { num:'09', name:'Travelling', blurb:'Nine countries. Raised between continents. Still going.', slides:4 },
   { num:'10', name:'Pin Collecting', blurb:'Large collection from Expo 2020 Dubai.', slides:2 },
 ]
-
-import { useState, useEffect } from 'react'
 
 function HobbyCell({ num, name, blurb, slides }) {
   const [hovered, setHovered] = useState(false)
@@ -78,6 +75,7 @@ function HobbyCell({ num, name, blurb, slides }) {
 
 export default function Hobbies() {
   const bannerRef = useReveal(0.2)
+  const cardRef = useReveal(0.2)
 
   return (
     <main className={styles.main}>
@@ -93,6 +91,11 @@ export default function Hobbies() {
           "A jack of all trades is a master of none, but oftentimes better than a master of one."
         </blockquote>
         <p className={styles.jackAttr}>The quote that lives rent-free — and fits perfectly.</p>
+      </div>
+
+      {/* Spinning card */}
+      <div ref={cardRef} className={`reveal ${styles.cardWrap}`}>
+        <img src="/stickers/card.png" alt="Jack of all trades" className={styles.cardSpin} />
       </div>
 
       {/* Circular Gallery */}
